@@ -1,0 +1,617 @@
+%sss{
+	padding:0;
+	margin: 0;
+}
+@mixin userem($size){
+	$shebei-list:320px,360px,375px,385px,412px,414px,480px;
+	@each $shebei in $shebei-list{
+	html{
+	@media screen and(min-width:$shebei){
+		font-size:100px*($shebei/$size);
+          }
+        }   
+	}
+}
+@include userem(360px);
+
+body,h1,h2,h3,h4,h5,h6,li,ul,img{
+	@extend %sss;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family:"Arial","微软雅黑",'font-serif';
+	font-size: 12px;
+}
+.yindao1{
+	width: 100%;
+	height: 100%;
+	background: red;
+	position: relative;
+    z-index: 1000;
+    
+	transition:all 0.6s ease;
+    img{
+    	width: 3.6rem;
+    	height: 6.4rem;
+    }
+    .anniu{
+        width: 0.7rem;
+        height: 0.35rem;
+        position: absolute;
+        right: 0.2rem;
+        top:0.3rem;
+
+    }
+}
+.yindao1.ng-hide{
+    transform:translateX(-3.6rem);
+}
+.toubu1{
+	width:100%;
+	height: 0.65rem;
+	background: #129AEE;
+	position:absolute;
+	top: 0;
+	left: 0;
+	.shijian{
+      width: 100%;
+      position: relative;
+      img{
+     	position: absolute;
+     	top: 0;
+     	left: 0;
+     	width: 3.61rem;
+     	height: 0.17rem;
+        }
+	}
+	.zixun{
+		width: 100%;
+		height: 0.48rem;
+        position: relative;
+        margin-top:0.17rem ;
+    .zizhu1{
+    	width:0.78rem;
+    	height: 0.25rem;
+    	position: absolute;
+    	margin: auto;
+    	top: 0;
+    	left: 0.15rem;
+    	bottom: 0;
+    }
+    .sousuo{
+        width:2.1rem;
+        height: 0.29rem;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 1.02rem;
+        background: #0E7CBE;
+        border-radius: 0.29rem;
+        .img1{
+        	width: 0.15rem;
+        	height: 0.15rem;
+        	position: absolute;
+        	margin: auto;
+        	top: 0;
+        	bottom: 0;
+        	left:0.15rem; 
+        }
+        input{
+        	 height: 100%;
+        	 width:1.4rem;
+        	 margin-left:0.35rem; 
+        	 border:none;
+        	 outline:none;
+        	 font-size: 0.12rem;
+             color: #fff;
+        }
+        .img2{
+        	width: 0.15rem;
+        	height: 0.18rem;
+        	position: absolute;
+        	margin: auto;
+        	top: 0;
+        	bottom: 0;
+        	right: 0.15rem;
+        }
+    }
+    .ziliao{
+    	width: 0.32rem;
+    	height: 0.32rem;
+    	position: absolute;
+    	margin: auto;
+    	top: 0;
+    	right:0.08rem;
+        bottom: 0;
+    }
+	}
+}
+.tb{
+	width: 100%;
+	height:1rem; 
+	position: absolute;
+	top:0;
+	left: 0;
+	.daohang{
+		margin-top:0.65rem; 
+		width: 100%;
+		height: 0.35rem;
+		border-bottom: 1px solid #DEDEDE;
+		overflow-x:auto; 
+		position: relative;
+		.daohang2{
+          position: fixed;
+          width: 0.38rem;
+          height: 0.35rem;
+          top: 0.65rem;
+          right: 0;
+		}
+		.daohang1{
+			height: 0.35rem;
+            width:4rem;
+
+			li{
+				display: inline-block;
+				height:100%;
+				line-height: 0.35rem;
+				margin-left:0.21rem;
+              a{
+              	color: #666;
+              	font-size: 0.15rem;
+              }
+			}
+		}
+	
+	}
+}
+
+
+
+
+//redian
+.rd{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4.8rem;
+	margin: 1rem 0 0.6rem 0;
+	overflow-y:auto;
+
+}
+.redian{
+	width: 100%;
+	padding:0 0.15rem; 
+   
+	.ozhou{
+      width: 100%;
+      padding:0.15rem 0 0.1rem 0;
+      h3{
+      	font-size: 16px;
+      	font-weight: 800;
+      	color:#666;
+      	letter-spacing:1px;
+      	line-height: 0.25rem;
+      }
+	}
+	ul {
+		margin: 0;
+		.s4{
+
+			padding: 0;
+			img{
+				width: 1.09rem;
+                height: 0.72rem;
+			}
+
+		}
+	
+	}
+   .zhongguo{
+   	width:100%;
+   	height: 0.3rem;
+   	border-bottom: 1px solid #DEDEDE;
+   	position: relative;
+   	.zhongguo1{
+    line-height: 0.3rem;
+    li{
+    	display: inline-block;
+    	a{
+    	color: #CBCBCB;
+    	font-size:0.06rem; 
+    	}
+    }
+   	}
+   	img{
+   		width: 0.17rem;
+   		height: 0.15rem;
+   		position: absolute;
+   		margin: auto;
+   		top: 0;
+   		bottom: 0;
+   		right: 0;
+   	}
+   }
+}
+
+/*dibu*/
+.dibu{
+	height:0.6rem;
+	width: 100%;
+	border: 1px solid #DEDEDE;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	.dibu1{
+		width: 100%;
+		height: 100%;
+
+		li{
+			width: 20%;
+			height: 100%;
+			float: left;
+			position: relative;
+			div{
+		   width: 100%;
+			height: 100%;
+			float: left;
+			position: relative;
+			   text-align: center;
+			
+			img{
+				width: 0.25rem;
+				height: 0.25rem;
+                position: absolute;
+                margin: auto;
+                top:0.1rem;
+                left: 0;
+                right: 0;
+               
+
+			}
+			span{
+                width: 20%;
+			    height: 100%;
+				line-height: 0.9rem;
+			 }
+			}	
+		}
+
+			
+		}
+	}
+
+.active{
+	color: #1FA0EE;
+	font-weight: 800;
+}
+/*shouqiang*/
+.shouqiang{
+	width: 100%;
+	height: 0.6rem;
+	background: #F0F0F0;
+   position: relative;
+    .wenti{
+    	position: absolute;
+    	top:0;
+    	bottom: 0;
+      left:0.15rem; 
+    	background: #ffffff;
+    	width: 0.75rem;
+    	height: 0.3rem;
+    	display: inline-block;
+    	border-radius: 0.05rem;
+    	margin: auto;
+    	a{  
+    		display: block;
+    		font-size: 13px;
+    		color: #111;
+    		width: 100%;
+    		height:100%;
+    		text-align: center;
+    		line-height: 0.3rem;
+    	}
+    }
+     .shiping{
+     	position: absolute;
+    	top:0;
+    	bottom: 0;
+        left:1rem; 
+        margin: auto;
+    	background: #ffffff;
+    	width: 0.75rem;
+    	height: 0.3rem;
+    	display: inline-block;
+    	border-radius: 0.05rem;
+    	a{   
+    		display: block;
+    		font-size: 13px;
+    		color: #111;
+    		width: 100%;
+    		height:100%;
+    		text-align: center;
+    		line-height: 0.3rem;
+    	}
+    }
+    .shenzuo{
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left:1.85rem; 
+      margin: auto;
+      background: #ffffff;
+      width: 0.75rem;
+      height: 0.3rem;
+      display: inline-block;
+      border-radius: 0.05rem;
+      a{   
+        display: block;
+        font-size: 13px;
+        color: #111;
+        width: 100%;
+        height:100%;
+        text-align: center;
+        line-height: 0.3rem;
+      }
+    }
+     .manwei{
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left:2.72rem; 
+      margin: auto;
+      background: #ffffff;
+      width: 0.75rem;
+      height: 0.3rem;
+      display: inline-block;
+      border-radius: 0.05rem;
+      a{   
+        display: block;
+        font-size: 13px;
+        color: #111;
+        width: 100%;
+        height:100%;
+        text-align: center;
+        line-height: 0.3rem;
+      }
+    }
+}
+.zhongwei{
+  height: 0.95rem;
+  width: 100%;
+  padding: 0 0.15rem 0;
+  .zhongwei1{
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #DEDEDE;
+    position: relative;
+    .zi{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 67%;
+     h3{
+      display: block;
+      margin:0.05rem 0 0.05rem;
+      font-size: 16px;
+        font-weight: 800;
+        color:#666;
+        letter-spacing:1px;
+        line-height: 0.25rem;
+     }
+      .zhongguo{
+    width:100%;
+    height: 0.3rem;
+    position: relative;
+    .zhongguo1{
+    line-height: 0.3rem;
+    li{
+      display: inline-block;
+      a{
+      color: #CBCBCB;
+      font-size:0.06rem; 
+      }
+    }
+    }
+    img{
+      width: 0.17rem;
+      height: 0.15rem;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+   }
+    }
+    .tu{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 33%;
+       img{
+        position: absolute;
+        margin: auto;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 1rem;
+        height: 0.67rem;
+       }
+    }
+  }
+}
+
+
+/*电影*/
+.dianying1{
+  width: 100%;
+  padding: 0  0.1rem  0;
+  h3{
+    width: 100%;
+    height: 0.42rem;
+     display: block;
+      margin:0.05rem 0 0.05rem;
+     font-size: 16px;
+     font-weight: 800;
+    color:#666;
+    letter-spacing:1px;
+   line-height: 0.42rem;
+  }
+  .jueji{
+    width:3.4rem ;
+    height: 1.9rem;
+    overflow: hidden;
+    img{
+    width: 3.4rem;
+    height: 1.9rem;
+  }
+  }
+  
+  .biaozhi{
+    height: 0.4rem;
+    width: 100%;
+    border-bottom: 1px solid  #DEDEDE;
+    li{
+      display: inline-block;
+      width: 15.9%;
+      height: 0.4rem;
+      position: relative;
+      img{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 0.18rem;
+        height: 0.18rem;
+      } 
+    }
+  }
+}
+
+ #grzl.ng-enter{
+  transition:transform 5s ease;
+  opacity: 0;
+  transform:translateX(0.36rem);
+}
+#grzl.ng-enter-active{
+  trandform:translateX(0);
+  opacity: 1;
+}
+#grzl.ng-leave{
+transition:transform 5s ease;
+}
+#grzl.ng-leave-active{
+  trandform:translateX(-0.36rem);
+  opacity: 0;
+}
+.grzl{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:6.4rem;
+  width: 100%;
+  background: #FAFAFA; 
+  z-index: 20;
+  overflow: hidden;
+  .img1{
+    width: 100%;
+    height: 0.19rem;
+  }
+  .tu2{
+    width: 100%;
+    height: 1.96rem;
+    position: relative;
+    border-bottom: 1px solid #DEDEDE;
+   .img2{
+    width: 100%;
+    height: 1.95rem;
+   }
+   .fanhui{
+    width: 0.1rem;
+    height: 0.15rem;
+    position: absolute;
+    top:0.18rem;
+    left: 0.11rem;
+    a{
+      display: block;
+      width: 0.1rem;
+      height: 0.15rem;
+    }
+   }
+  }
+  .shoucang{
+    width: 100%;
+    height: 0.45rem;
+    border-bottom:1px solid #DEDEDE; 
+    position: relative;
+    .xingxing{
+      width: 0.2rem;
+      height: 0.2rem;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left:0.24rem;
+    }
+    span{
+
+      line-height: 0.45rem;
+      color: #222;
+      font-size: 15px;
+      margin-left:0.6rem; 
+    }
+    .fanhui{
+      width: 0.09rem;
+      height: 0.15rem;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right:0.20rem;
+    }
+    }
+  
+  .shezhilei{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.9rem;
+    padding: 0 0.16rem;
+   li{
+    width: 24%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    img{
+      position: absolute;
+      margin: auto;
+      top:0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    span{
+    
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      line-height:1.5rem;
+    }
+   }
+  }
+}

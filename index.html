@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"ng-app="bdnews">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link href="http://cdn.bootcss.com/materialize/0.97.6/css/materialize.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/Swiper/3.3.1/css/swiper.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.js"></script>
+	<script type="text/javascript"src="./js/angular.js"></script>
+	<script type="text/javascript"src="./js/angular-route.js"></script>
+	<script type="text/javascript"src="./js/angular-touch.js"></script>
+	<script type="text/javascript"src="./js/angular-animate.js"></script>
+	<script type="text/javascript"src="./js/index.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+    <bd-yindao ng-if='isFirstOpen'></bd-yindao>
+	<bd-tap-tap></bd-tap-tap>
+    <ng-view id="view"></ng-view>
+    <bd-bottom></bd-bottom>
+</body>
+</html>
